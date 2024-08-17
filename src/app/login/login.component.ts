@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { FormsModule } from '@angular/forms';  // Import FormsModule for ngModel
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
+  standalone: true,
+  imports: [FormsModule],  // Include FormsModule in the imports array
 })
 export class LoginComponent {
   username: string = '';
