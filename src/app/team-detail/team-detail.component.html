@@ -1,0 +1,13 @@
+<h2>Team Details</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Team Name</label>
+    <input type="text" id="name" [(ngModel)]="team.name" name="name" required>
+  </div>
+  <div>
+    <label for="description">Team Description</label>
+    <input type="text" id="description" [(ngModel)]="team.description" name="description" required>
+  </div>
+  <button type="submit">Save Changes</button>
+</form>
+<button (click)="deleteTeam()">Delete Team</button>

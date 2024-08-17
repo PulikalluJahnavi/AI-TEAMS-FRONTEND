@@ -1,0 +1,12 @@
+<h2>Teams</h2>
+<ul>
+  <li *ngFor="let team of teams">
+    <h3>{{ team.name }}</h3>
+    <p>{{ team.description }}</p>
+    <p>Agents:</p>
+    <ul>
+      <li *ngFor="let agent of team.agents">{{ agent.name }}</li>
+    </ul>
+    <button (click)="viewDetails(team.id)">View Details</button>
+  </li>
+</ul>
